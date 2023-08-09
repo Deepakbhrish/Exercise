@@ -1,0 +1,6 @@
+FID;linkEmployee_ID;FatherName;MotherName;SpouseName;SpouseDateOfBirth;SpouseOccupation;SpouseEmail;SpousePhone;NumberOfChildren;Child1Name;Child1DateofBirth;Child1Gender;Child2Name;Child2DateofBirth;Child2Gender;Child3Name;Child3DateofBirth;Child3Gender;Sibling1Name;Sibling1DateofBirth;Sibling1Relationship
+100;1;Michael Doe;Jane Doe;Jane Doe Jr;2015-08-22;Teacher;jane.doe@example.com;555-789-0123;2;Susan Doe;2019-03-10;Female;Jack Doe;2022-01-05;Male;N/A;N/A;N/A;N/A;N/A;N/A;N/A
+200;2;John Smith;Emily Smith;N/A;N/A;N/A;N/A;N/A;0;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A
+300;1;David Johnson;Sara Johnson;David Johnson Jr;2020-05-15;Student;david.johnson@example.com;555-123-4567;1;Sophia Johnson;2022-05-20;Female;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A
+400;1;Robert Williams;Anna Williams;N/A;N/A;N/A;N/A;N/A;0;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A
+500;4;James Kim;Jennifer Kim;N/A;N/A;N/A;N/A;N/A;0;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A;N/A

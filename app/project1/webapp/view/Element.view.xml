@@ -1,0 +1,128 @@
+<mvc:View controllerName="project1.controller.Element"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+   <Button id="_IDGenButton1" text="{/ID}" type="Default"></Button>
+
+   <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay480_12120Dual"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Personal Information"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title id="_IDGenTitle1" />
+				<Label id="_IDGenLabel1" text="ID" />
+                <Text id="_IDGen5Text1" text="{ID}" />
+				<Label id="_IDGenLabel2" text="FirstName" />
+                <Text id="_IDGen8Text1" text="{FirstName}" />
+
+				<Label id="_IDGenLabel3" text="LastName" />
+                <Text id="_IDGen9Text1" text="{}" />
+
+				<Label id="_IDGenLabel4" text="Email" />
+                <Text id="_IDGenT6ext1" text="{}" />
+                <Label id="_IDGenLabe5l4" text="DateofBirth" />
+                <Text id="_IDGenT6ext51" text="{}" />
+                <Label id="_IDGenL7abel4" text="Nationality" />
+                <Text id="_IDGenT6ext81" text="{}" />
+                <Label id="_IDGenLabel54" text="Address" />
+                <Text id="_IDGenT586ext1" text="{}" />
+                <Label id="_IDGenLa7bel4" text="PostalCode" />
+                <Text id="_IDGe8nT6ext1" text="{}" />
+                <Label id="_IDGenLabe4l4" text="MaritalStatus" />
+                <Text id="_IDGen4T6ext1" text="{}" />
+                
+               
+
+
+				<core:Title id="_IDGenTitle2" />
+				<Label id="_IDGenLabel5" text="Gender" />
+                <Text id="_IDGen3Text1" text="{}" />
+
+				<Label id="_IDGenLabel6" text="City" />
+                <Text id="_IDGenText1" text="{}" />
+                <Label id="_ID4GenLabel4" text="EmaEducationLevelil" />
+                <Text id="_IDGenT86ext1" text="{}" />
+                <Label id="_IDGen9Label4" text="BloodGroup" />
+                <Text id="_IDGenT26ext1" text="{}" />
+                <Label id="_IDGe7nLabel4" text="EmergencyContactName" />
+                <Text id="_IDGen9T6ext1" text="{}" />
+                <Label id="_IDGe8nLabel4" text="EmergencyContactPhone" />
+                <Text id="_IDG5en5T6ext1" text="{}" />
+                <Label id="_I6DGenLabel4" text="PassportNumber" />
+                <Text id="_IDGe6nT6ext1" text="{}" />
+                <Label id="_IDGe3nLabel4" text="DriverLicenseNumber" />
+                <Text id="_IDGen5T6ext1" text="{}" />
+                <Label id="_ID8GenLabel4" text="Occupation" />
+                <Text id="_IDG5enT6ext1" text="{}" />
+                
+
+			</f:content>
+		</f:SimpleForm>
+
+        <!-- <Table id="idProductsTable" items="{/FamilyInformation}"
+        
+			
+		>
+
+		<columns>
+			
+			<Column id="_IDGenColumn2"
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text id="_IDGenText2" text="FatherName" />
+			</Column>
+			<Column id="_IDGenColumn3"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="End">
+				<Text id="_IDGenText3" text="MotherName" />
+			</Column>
+			<Column id="_IDGenColumn4"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="Center">
+				<Text id="_IDGenText4" text="SpouseName" />
+			</Column>
+			<Column id="_IDGenColumn5"
+				hAlign="End">
+				<Text id="_IDGenText5" text="SpouseDateOfBirth" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle" type="Active"  press="click" >
+				<cells>
+				
+					
+                    <Text id="_IDGevnText6"
+						text="{FatherName}" />
+					<Text id="_IDGenText7"
+                    text="{MotherName}" />
+                    <Text id="_IDGen5Text6"
+						text="{SpouseName}" />
+					<Text id="_IDGenT5ext7"
+                    text="{SpouseDateOfBirth}" />
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table> -->
+	</VBox>
+    </Page>
+</mvc:View>

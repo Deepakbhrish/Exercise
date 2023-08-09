@@ -1,0 +1,137 @@
+<mvc:View
+    controllerName="project2.controller.Worklist"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false">
+
+        <semantic:titleHeading>
+            <Title id="_IDGenTitle1"
+                text="{i18n>worklistTitle}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:content>
+            <Table
+                id="table"
+                width="auto"
+                items="{
+                    path: '/PersonalInformation',
+                    sorter: {
+                        path: 'ID',
+                        descending: false
+                    }
+                }"
+                noDataText="{worklistView>/tableNoDataText}"
+                busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+                growing="true"
+                growingScrollToLoad="true"
+                updateFinished=".onUpdateFinished">
+
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <Title
+                            id="tableHeader"
+                            text="{worklistView>/worklistTableTitle}"
+                            level="H3"/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <SearchField
+                            id="searchField"
+                            tooltip="{i18n>worklistSearchTooltip}"
+                            search=".onSearch">
+                            <layoutData>
+                                <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1"
+                                    maxWidth="200px"
+                                    priority="NeverOverflow"/>
+                            </layoutData>
+                        </SearchField>
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="nameColumn">
+                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                    </Column>
+                    <Column id="unitNumberColumn" hAlign="End">
+                        <Text text="First Name" id="unitNumberColumnTitle"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1"
+                        type="Navigation"
+                        press=".onPress">
+                        <cells>
+                            <ObjectIdentifier id="_IDGenObjectIdentifier1"
+                                title="{ID}"/>
+                            <ObjectNumber id="_IDGenObjectNumber1"
+                                unit="{FirstName}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            
+        </semantic:content>
+
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>
+
+    </semantic:SemanticPage>
+
+</mvc:View>
+ <!-- <Table id="idProducgtsTable" items="{/FamilyInformation}"
+        
+			
+		>
+
+		<columns>
+			<Column id="_IDGenColfumn1"
+				width="12em">
+				<Text id="_IDGefnText1" text="ID" />
+			</Column>
+			<Column id="_IDGenCoflumn2"
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text id="_IDGenTfext2" text="FatherName" />
+			</Column>
+			<Column id="_IDGenColfumn3"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="End">
+				<Text id="_IDGefnText3" text="MotherName" />
+			</Column>
+			<Column id="_IDGenCoflumn4"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="Center">
+				<Text id="_IDGfenText4" text="SpouseName" />
+			</Column>
+			<Column id="_IDGenColfumn5"
+				hAlign="End">
+				<Text id="_IDGenTefxt5" text="SpouseEmail" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="_IDGenCfolumnListItem1" vAlign="Middle" type="Active"  press="click" >
+				<cells>
+				
+					<Text id="_IDGenfText6"
+						text="{ID}" />
+                    <Text id="_IDGevfnText6"
+						text="{FatherName}" />
+					<Text id="_IDGenfText7"
+                    text="{MotherName}" />
+                    <Text id="_IDGenf5Text6"
+						text="{SpouseName}" />
+					<Text id="_IDGefnT5ext7"
+                    text="{SpouseEmail}" />
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table> -->

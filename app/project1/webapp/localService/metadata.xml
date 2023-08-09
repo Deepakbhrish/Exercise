@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="CatalogService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="PersonalInformation" EntityType="CatalogService.PersonalInformation"/>
+                <EntitySet Name="FamilyInformation" EntityType="CatalogService.FamilyInformation"/>
+            </EntityContainer>
+            <EntityType Name="PersonalInformation">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="FirstName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="LastName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="DateOfBirth" Type="Edm.Date"/>
+                <Property Name="Gender" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Nationality" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="100"/>
+                <Property Name="City" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Phone" Type="Edm.String" MaxLength="20"/>
+                <Property Name="MaritalStatus" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Occupation" Type="Edm.String" MaxLength="100"/>
+                <Property Name="EducationLevel" Type="Edm.String" MaxLength="50"/>
+                <Property Name="BloodGroup" Type="Edm.String" MaxLength="5"/>
+                <Property Name="EmergencyContactName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="EmergencyContactPhone" Type="Edm.String" MaxLength="20"/>
+                <Property Name="PassportNumber" Type="Edm.String" MaxLength="20"/>
+                <Property Name="DriverLicenseNumber" Type="Edm.String" MaxLength="20"/>
+            </EntityType>
+            <EntityType Name="FamilyInformation">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="FatherName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="MotherName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="SpouseName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="SpouseDateOfBirth" Type="Edm.Date"/>
+                <Property Name="SpouseOccupation" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SpouseEmail" Type="Edm.String" MaxLength="100"/>
+                <Property Name="SpousePhone" Type="Edm.String" MaxLength="20"/>
+                <Property Name="NumberOfChildren" Type="Edm.Int32"/>
+                <Property Name="Child1Name" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Child1DateOfBirth" Type="Edm.Date"/>
+                <Property Name="Child1Gender" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Child2Name" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Child2DateOfBirth" Type="Edm.Date"/>
+                <Property Name="Child2Gender" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Child3Name" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Child3DateOfBirth" Type="Edm.Date"/>
+                <Property Name="Child3Gender" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Sibling1Name" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Sibling1DateOfBirth" Type="Edm.Date"/>
+                <Property Name="Sibling1Relationship" Type="Edm.String" MaxLength="50"/>
+            </EntityType>
+            <Annotations Target="CatalogService.EntityContainer/PersonalInformation">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="CatalogService.EntityContainer/FamilyInformation">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
