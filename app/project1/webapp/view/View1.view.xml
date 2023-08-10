@@ -142,9 +142,9 @@
                         press=".onLeaveReqPress">
                         <cells>
                              <ObjectIdentifier id="_IDGenObjecgtIdentifier1"
-                                title="{FID}"/>
+                                title="{FatherName}"/>
                             <ObjectNumber id="_IDGenObjegctNumber1"
-                                unit="{linkEmployee_ID}" />
+                                unit="{MotherName}" />
                         </cells>
                     </ColumnListItem>
                 </items>

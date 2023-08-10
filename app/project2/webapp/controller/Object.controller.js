@@ -4,8 +4,10 @@ sap.ui.define([
     "sap/ui/core/routing/History",
     "../model/formatter",
     "sap/m/MessageToast",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
     "sap/m/MessageBox"
-], function (BaseController, JSONModel, History, formatter,MessageToast, MessageBox) {
+], function (BaseController, JSONModel, History, formatter,MessageToast,Filter, FilterOperator, MessageBox) {
     "use strict";
 
     return BaseController.extend("project2.controller.Object", {
@@ -63,8 +65,21 @@ sap.ui.define([
          * @private
          */
         _onObjectMatched : function (oEvent) {
+            // this.getView().byId("isNew").setState(false);
             var sObjectId =  oEvent.getParameter("arguments").objectId;
             this._bindView("/PersonalInformation" + sObjectId);
+            
+        },
+        bindLeaveRequestTable: function()
+
+        {
+
+            var leavereqTable = this.getView().byId("leavereqTable");
+            var leavereqItems = this.getView().byId("leavereqItems").clone();
+            var employeeId = this.getView().byId("_IDGenTitle1").getText();
+            var ID = [new Filter("linkEmployee_ID", FilterOperator.EQ, employeeId)];
+            leavereqTable.bindAggregation("items",{path:"/FamilyInformation",template:leavereqItems, 
+            filters:ID});
         },
 
         /**
@@ -88,6 +103,7 @@ sap.ui.define([
                     }
                 }
             });
+            this.bindLeaveRequestTable();
         },
         onNewEmployee: function(oEvent)
 

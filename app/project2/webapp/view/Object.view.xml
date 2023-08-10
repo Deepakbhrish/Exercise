@@ -134,6 +134,65 @@
                     </ColumnListItem>
                 </items>
             </Table>
+             <!-- <Table
+                id="table"
+                width="auto"
+                items="{
+                    path: '/PersonalInformation',
+                    sorter: {
+                        path: 'ID',
+                        descending: false
+                    }
+                }"
+                noDataText="{worklistView>/tableNoDataText}"
+                busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+                growing="true"
+                growingScrollToLoad="true"
+                updateFinished=".onUpdateFinished">
+
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOfverflowToolbar1">
+                        <Title
+                            id="tableHefader"
+                            text="{worklistView>/worklistTableTitle}"
+                            level="H3"/>
+                        <ToolbarSpacer id="_IDGenToolbafrSpacer1" />
+                        <SearchField
+                            id="searchFifeld"
+                            tooltip="{i18n>worklistSearchTooltip}"
+                            search=".onSearch">
+                            <layoutData>
+                                <OverflowToolbarLayoutData id="_IDGenOvefrflowToolbarLayoutData1"
+                                    maxWidth="200px"
+                                    priority="NeverOverflow"/>
+                            </layoutData>
+                        </SearchField>
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="nameColumn">
+                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                    </Column>
+                    <Column id="unitNumberColumn" hAlign="End">
+                        <Text text="First Name" id="unitNumberColumnTitle"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1"
+                        type="Navigation"
+                        press=".onPress">
+                        <cells>
+                            <ObjectIdentifier id="_IDGenObjectIdentifier1"
+                                title="{ID}"/>
+                            <ObjectNumber id="_IDGenObjectNumfber1"
+                                unit="{FirstName}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> -->
+            
         </VBox>
 		
         </semantic:content>
